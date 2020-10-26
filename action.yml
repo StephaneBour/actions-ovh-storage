@@ -1,0 +1,15 @@
+name: 'OVH Object Storage (swift)'
+description: 'Execute swift commands for OVH Object Storage'
+branding:
+  icon: 'database'
+  color: 'blue'
+inputs:
+  args:
+    description: 'Arguments to pass to swift'
+    required: false
+    default: '--version'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.args }}
